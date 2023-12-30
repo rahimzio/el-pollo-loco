@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Slab:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="img/7_statusbars/3_icons/icon_health_endboss.png">
+    <script src="classes/world.class.js"></script>
+    <script src="classes/keyboard.class.js"></script>
+    <script src="classes/drawdown.class.js"></script>
+    <script src="classes/gamestart.js"></script>
+    <script src="classes/movable-object.classes.js"></script>
+    <script src="classes/salsa_bottle.class.js"></script>
+    <script src="classes/bottle_splash.class.js"></script>
+    <script src="classes/bottlebar.js"></script>
+    <script src="classes/coins.class.js"></script>
+    <script src="classes/coinsbar.class.js"></script>
+    <script src="classes/background-object.class.js"></script>
+    <script src="classes/throwobj.class.js"></script>
+    <script src="classes/statusbar.class.js"></script>
+    <script src="classes/cloud.class.js"></script>
+    <script src="classes/chicken.class.js"></script>
+    <script src="classes/charackter.class.js"></script>
+    <script src="classes/level.class.js"></script>
+    <script src="classes/endboss.class.js"></script>
+    <script src="classes/boss_statusbar.class.js"></script>
+    <script src="classes/gameover.class.js"></script>
+    <script src="level/level1.js"></script>
+    <script src="classes/boss_statusbar_icon.class.js"></script>
+    <script src="classes/gamestartworld.class.js"></script>
+    <script src="js/game.js"></script>
+    <title>El Pollo Loco</title>
+</head>
+<body onload="init()">
+<div class="main-container">
+        <h1>El Pollo Loco</h1>
+        
+    <div class="canvas-div">
+    <div class="turn_phone">
+        <div>please turn the phone</div>
+            <div><img id="turnPhoneImg" src="img/img/crt/turn-phone.png"></div>
+            </div>
+
+        <div class="d-flex" id="gamefield">
+            <div class="restart_bnt d-none" id="game_over_bnt" onclick="display_c_bnt()">restart</div>
+            <div class="endgame_screen d-none" id="end_screen" onclick="display_c_bnt()">
+               <div>You Won</div> 
+               <div class="restart_bnt">restart</div>
+            </div>
+            <div class="central">
+                <div  id="game_image_2" class="d-none z-index play_bnt" style="margin-right: 10px;"><img src="img/img/crt/left.png"></div>
+                <div id="game_image_1" class="d-none z-index play_bnt"><img src="img/img/crt/right.png"></div>
+            </div>
+    <canvas id="canvas" width="720" height="480" onclick="display_c_dead()" >
+    </canvas>
+    <div class="show-ctr">
+        <img  onclick="display_c()" src="img/img/gear.svg" style="width: 34px;">
+        <img onclick="TurnSoundOn()" src="img/img/ear (1).svg" style="width: 34px;" id="ear">
+    </div>
+    <div id="direction" class="d-none directions">
+        <div>
+        <li>mit W springt man</li>
+        <li>mit A geht man nach links</li>
+        <li>mit D geht man nach rechts</li>
+        <li>mit space wirft man</li>
+        </div>
+    </div>
+
+        <div id="start_bnt" class="start_bnt z-index"  onclick="display_c_bnt_direct()">
+            <img style="    min-width: 90px;" src="/img/img/play-button_4851404 (1).png">
+            </div>
+    </div>
+
+        <div class="central1">
+            <div id="game_image_4" class="d-none z-index play_bnt"><img src="img/img/crt/bottle.png"></div>
+            <div id="game_image_3" class="d-none z-index play_bnt" style="margin-left: 10px;"><img src="img/img/crt/up.png"></div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
